@@ -5,3 +5,4 @@
 * npm install
 * cd..
 * yarn dev
+* view result at http://localhost:3000/
