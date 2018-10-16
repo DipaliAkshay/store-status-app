@@ -19,10 +19,6 @@ var cors = require('cors');
 app.use(cors());
 // ##### /IMPORTANT ####
 // #####################
-app.get('/api/hello', (req, res) => {
-  res.send({ express: 'Hello From Express' });
-});
-
 
 app.get('/api/store', (req, res) => {
   axios({
@@ -30,7 +26,6 @@ app.get('/api/store', (req, res) => {
     url:'https://istheapplestoredown.com/api/v1/status/worldwide'
   })
     .then(function (response) {
-     // response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
       res.send({ data: response.data });
 
     });
